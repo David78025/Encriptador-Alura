@@ -9,16 +9,22 @@
     </head>
     <body>
         <h1>Encriptador de David</h1>
+        <main class="contenedor-principal"></main>
+        <div class="tarjeta">
+            <input type="text" id="mensaje" placeholder="Ingrese su mensaje">
+            <button id="encriptar">Encriptar</button>
+            <button id="desencriptar">Desencriptar</button>
+        </div>
+        <div class="tarjeta">
+            <input type="text" id="resultado" placeholder="Resultado...">
+            <button id="copiar">Copiar</button>
+            <button id="escuchar">Escuchar</button>
+        </div>
+
         <text>
-            <label for="text.in">Inserte texto para encriptar/desencriptar</label>
-            <textarea cols="70" rows="10" id="text.in" class="input-encriptador" required> </textarea>
+            <input type="text" value="Encriptar" class="button" id="encriptar">
 
-            <label for="text.out">Resultado desencriptado/encriptado</label>
-            <textarea cols="70" rows="10" id="text.out" class="output-encriptador" required> </textarea>
-
-            <input type="button" value="Encriptar" class="enviar">
-
-            <input type="button" value="Desencriptar" class="enviar">
+            <input type="text" value="Desencriptar" class="button" id="desencriptar">
 
         </text>
         
