@@ -30,6 +30,20 @@ function desencriptar (){
     inputResultado.value = mensaje;
 }
 
+function copiar (){
+    var mensajeEncriptado = inputResultado.value;
+    navigator.clipboard.writeText(mensajeEncriptado);
+}
+
+function escuchar (){
+    var mensajeEncriptado = inputResultado.value;
+    let msg = new SpeechSynthesisUtterance;
+    msg.text = mensajeEncriptado;
+    msg.lang = "es-Es";
+    window.speechSynthesis.speak(msg);
+}
 
 btnEncriptar.onclick = encriptar;
 btnDesencriptar.onclick = desencriptar;
+btnCopiar.onclick = copiar;
+btnEscuchar.onclick = escuchar;
