@@ -5,10 +5,16 @@ const btnEncriptar = document.querySelector("#encriptar");
 const btnDesencriptar = document.querySelector("#desencriptar");
 const btnCopiar = document.querySelector("#copiar");
 const btnEscuchar = document.querySelector("#escuchar");
-/*
+
 const tarjeta1 = document.querySelector(".num1");
 
 function validarMensaje (){
+    // bprrar errores previos
+    let erroresPrevios = tarjeta1.querySelectorAll(".error");
+    for (let err of erroresPrevios){
+        console.log(err);
+        tarjeta1.removeChild(err);
+    }      
     var mensaje = inputMensaje.value;
     let letrasValidas = "abvdefghijklmnñoprstuvwxyz"
     let mensajeError = document.createDocumentFragment();
@@ -21,14 +27,14 @@ function validarMensaje (){
         }
     }
     tarjeta1.appendChild(mensajeError);
-    if (mensajeError.length === 0) {
+    if (mensajeError.children.length === 0) {
         return true;
     }
     return false;
 }
-*/
+
 function encriptar (){
-    /*if (!validarMensaje()) return;*/
+    if (!validarMensaje()) return;
     var mensaje = inputMensaje.value;
     var mensajeEncriptado = mensaje
     .replaceAll("e","enter")
@@ -41,7 +47,7 @@ function encriptar (){
 }
 
 function desencriptar (){
-   /* if (!validarMensaje()) return;*/
+    if (!validarMensaje()) return;
     var mensajeEncriptado = inputMensaje.value;
     var mensaje = mensajeEncriptado
     .replaceAll("enter","e")
