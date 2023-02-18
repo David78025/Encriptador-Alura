@@ -62,6 +62,8 @@ function desencriptar (){
 function copiar (){
     var mensajeEncriptado = inputResultado.value;
     navigator.clipboard.writeText(mensajeEncriptado);
+    inputMensaje.value = "";
+    inputMensaje.focus();
 }
 
 function escuchar (){
